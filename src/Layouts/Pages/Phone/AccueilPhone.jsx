@@ -20,7 +20,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
-const HomePage = () =>
+const AccueilPhone = () =>
 {
   // Etat
   const competences = [
@@ -49,7 +49,7 @@ const HomePage = () =>
 
   // Affichage
   return (
-    <div className="bg-gradient-to-b from-base-900 via-base-700 to-base-400 text-base-100 h-screen py-3 flex flex-col gap-5 items-center">
+    <div className={`bg-gradient-to-b from-base-900 via-base-700 to-base-400 text-base-100 h-screen py-3 flex flex-col gap-5 items-center`}>
 
       {/* Contenu misy anarana */}
       <div className="w-full h-[10%] items-center justify-center flex flex-col">
@@ -90,4 +90,4 @@ const HomePage = () =>
   );
 };
 
-export default HomePage;
+export default AccueilPhone;

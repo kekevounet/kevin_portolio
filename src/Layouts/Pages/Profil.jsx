@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import AccueilLaptop from "./Laptop/AccueilLaptop";
-import AccueilPhone from "./Phone/AccueilPhone"
+import ProfilPhone from './Phone/ProfilPhone';
+import ProfilLaptop from './Laptop/ProfilLaptop';
 export default function Accueil(  {navHoverFlou, setNavHoverFlou} )
 {
   // Etat
@@ -24,11 +24,11 @@ export default function Accueil(  {navHoverFlou, setNavHoverFlou} )
     <div>
       { isMobile ?
       (
-        <AccueilPhone />
+        <ProfilPhone />
       )
       :
       (
-        <AccueilLaptop navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
+        <ProfilLaptop navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       ) }
     </div>
   )

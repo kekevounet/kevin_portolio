@@ -1,10 +1,14 @@
 import { Routes, Route } from "react-router-dom";
-import Index from "./Layouts/Components/Index";
+import Index from "./Layouts/Pages/Index";
 import NavBar from "./Layouts/Components/NavBar";
-import Swal from 'sweetalert2'
-import { useEffect } from "react";
+import Swal from 'sweetalert2';
+import Profil from './Layouts/Pages/Profil';
+import { useEffect, useState } from "react";
 export default function App()
 {
+  // Etat
+  const [ navHoverFlou, setNavHoverFlou ] = useState(false);
+
   // Comportement
 useEffect(() => {
   const showTermsAndConditions = async () => {
@@ -13,18 +17,18 @@ useEffect(() => {
       input: "checkbox",
       inputValue: 1,
       inputPlaceholder: `
-        I agree with the terms and conditions
+        Acceptez-vous de d'acceptez que ce site est encore en cours de prodution ?
       `,
       confirmButtonText: `
         Continue&nbsp;<i class="fa fa-arrow-right"></i>
       `,
       inputValidator: (result) => {
-        return !result && "You need to agree sir.";
+        return !result && "Vous devez acceptez afin de pouvoir continuer";
       }
     });
 
     if (accept) {
-      Swal.fire("You agreed, thanks you. ");
+      Swal.fire("Je vous remercie pour votre comprehension.");
     }
   };
 
@@ -33,9 +37,10 @@ useEffect(() => {
   // Affichage
   return(
     <div className="">
-      <NavBar />
+      <NavBar navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       <Routes>
-        <Route path='/' element={ <Index /> }  />
+        <Route path='/' element={ <Index navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
+        <Route path='/Profil' element={ <Profil navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
       </Routes>
     </div>
   )

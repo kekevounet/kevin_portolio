@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import NavBarPhone from "../Pages/Phone/NavBarPhone";
 import NavBarlaptop from "../Pages/Laptop/NavBarLaptop";
-export default function App()
+export default function NavBar( {navHoverFlou, setNavHoverFlou} )
 {
   // Etat
   const [ isMobile, setIsMobile ] = useState(false);
+
 
   // Comportement
   useEffect(()=>
@@ -28,7 +29,7 @@ export default function App()
       )
       :
       (
-        <NavBarlaptop />
+        <NavBarlaptop navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       ) }
     </div>
   )
