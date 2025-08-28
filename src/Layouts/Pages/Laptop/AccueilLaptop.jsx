@@ -20,7 +20,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { CgFacebook } from "react-icons/cg";
 import Maquette from '../../Assets/Maquette.jpg';
 import Kevin from '../../Assets/Kevin.jpg';
-export default function AccueilLaptop({navHoverFlou, setNavHoverFlou})
+export default function AccueilLaptop({navHoverFlou})
 {
   // Etat
   const liens = [
@@ -47,7 +47,7 @@ const competences = [
 ];
   // Affichage
   return(
-    <div className={`w-full h-screen flex justify-between items-center px-[40px] gap-0 py-[0px] z-10 background1 duration-500 ${navHoverFlou ? 'blur-md' : '' }`}>
+    <div className={`w-full h-screen flex justify-between items-center px-[40px] gap-0 py-[0px] z-10 background1 duration-500 ${navHoverFlou ? 'blur-md' : '' }`} id="Accueil">
       {/* Texte au début */}
       <div className="w-[45%] h-[70%] flex flex-col justify-between gap-3">
         {/* Grand annoncement */}
