@@ -29,7 +29,7 @@ export default function ProfilMobile() {
             Comment je peux vous aider ?
           </h2>
           <p className="text-sm leading-relaxed text-base-300 mb-4">
-            Je construis des applications web robustes et esthétiques, du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une **architecture solide et un code propre**.
+            Je construis des applications web robustes et esthétiques, du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une <span className="font-bold">architecture solide et un code propre</span>.
           </p>
           <ul className="list-disc list-inside text-sm space-y-1 mt-4 text-gray-400">
             <li>Développement Front-end avec React JS</li>

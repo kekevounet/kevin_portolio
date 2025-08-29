@@ -39,7 +39,7 @@ export default function ProfilLaptop({navHoverFlou}) {
             <ul className="list-disc list-inside text-sm space-y-1 mt-4">
               <li>Développement Front-end avec React JS</li>
               <li>Création d'APIs RESTful avec Express JS</li>
-              <li>Intégration de bases de données (MongoDB, MySQL)</li>
+              <li>Intégration de bases de données (MySQL)</li>
             </ul>
           </div>
           <div className="text-right text-xs text-gray-500 mt-4">
