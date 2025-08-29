@@ -14,7 +14,7 @@ export default function NavBar({navHoverFlou, setNavHoverFlou})
    const menus = [
       { icon: <CgHomeAlt />, label: "Accueil", lien: "Accueil" },
       { icon: <AiOutlineUser />, label: "Profil", lien: "Profil" },
-      { icon: <AiOutlineFolderOpen />, label: "Projets", lien: "Projets" },
+      { icon: <AiOutlineFolderOpen />, label: "Compétences", lien: "Competences" },
       { icon: <AiOutlineMail />, label: "Contact", lien: "Contact" },
       { icon: <BiBookContent />, label: "CV", lien: "CV" },
     ]
@@ -68,7 +68,7 @@ export default function NavBar({navHoverFlou, setNavHoverFlou})
                 <div className="h-[85%] w-full flex flex-col items-center justify-center p-3 space-y-1 duration-500 delay-300">
                   {menus.map((menu,index)=>(
                     <a className="flex items-center w-full group justify-center cursor-pointer p-3 hover:bg-slate-200 rounded-3xl text-black no-underline relative" key={index} href={`#${menu.lien}`}>
-                      <span className="text-2xl absolute left-7 group-hover:text-secondaire-500">{menu.icon}</span>
+                      <span className="text-2xl absolute left-3 group-hover:text-secondaire-500">{menu.icon}</span>
                       <span className="text-2xl group-hover:text-secondaire-500">{menu.label}</span>
                       <span className="w-0 group-hover:w-20 absolute left-1/2 h-1 duration-300 bottom-0 bg-secondaire-500"></span>
                       <span className="w-0 group-hover:w-20 absolute right-1/2 h-1 duration-300 bottom-0 bg-secondaire-500"></span>

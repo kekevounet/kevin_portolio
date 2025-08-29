@@ -51,7 +51,7 @@ const competences = [
       {/* Texte au début */}
       <div className="w-[45%] h-[70%] flex flex-col justify-between gap-3">
         {/* Grand annoncement */}
-        <div className="overflow-hidden w-full h-[80%] tracking-wider text-shadow flex items-center mb-0 justify-center font-semibold text-8xl text-base-100">
+        <div className="overflow-hidden w-full h-[80%] tracking-wider text-shadow1 flex items-center mb-0 justify-center font-semibold text-8xl text-base-100">
           Bonjour, je suis développeur fullstack &copy;
         </div>
         {/* Petit annoncement */}
@@ -66,12 +66,15 @@ const competences = [
       <div className="w-1/2 h-[70%] flex flex-col justify-between gap-3">
         <div className="w-full h-2/3 flex items-center flex-row justify-between gap-3">
         {/* Information du gauche */}
-          <div className="w-1/2 h-full rounded-3xl bg-base-100 overflow-hidden relative ombre flex hover:-translate-y-3 ease-in-out duration-300 cursor-pointer">
+          <a href="#Profil" className="w-1/2 h-full rounded-3xl bg-base-100 overflow-hidden relative ombre flex hover:-translate-y-3 group ease-in-out duration-300 cursor-pointer">
             <img src={Maquette} alt="Présentation" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-base-600 via-base-400/90 to-transparent pointer-events-none flex justify-center items-end font-bold text-5xl p-4 text-base-100">MAMINIRINA Niavo Kevin</div>
-          </div>
+            <div class="w-full h-0 bg-gradient-to-t from-base-600 via-base-400/90 to-base-200 absolute group-hover:h-full bottom-0 left-0 rounded-3xl duration-300 flex items-center justify-center">
+              <span class="scale-0 group-hover:scale-100 duration-500 text-8xl text-white font-bold text-shadow1">Profil</span>
+            </div>
+          </a>
           {/* Image de droite */}
-          <div className="w-1/2 h-full rounded-3xl overflow-hidden ombre hover:-translate-y-3 ease-in-out duration-300 cursor-pointer">
+          <div className="w-1/2 h-full rounded-3xl overflow-hidden hover:cursor-none ombre hover:-translate-y-3 ease-in-out duration-300 cursor-pointer">
             <img src={Kevin} alt="Mon aperçu" className='w-full h-full object-cover ombre' />
           </div>
         </div>
@@ -79,7 +82,7 @@ const competences = [
         {/* Le ambany ito le misy contact */}
         <div className="w-full h-1/3 flex justify-between flex-row items-center gap-3">
           {/* Voalohany */}
-          <div className="w-2/3 h-full bg-base-100 ombre rounded-3xl overflow-hidden hover:-translate-y-3 ease-in-out duration-300 cursor-pointer">
+          <a href="#Competences" className="no-underline w-2/3 h-full bg-base-100 ombre rounded-3xl overflow-hidden hover:-translate-y-3 ease-in-out duration-300 cursor-pointer group relative">
             <div className="h-[60%] w-full flex items-center px-3 text-3xl font-bold text-base-900">Disponible pour des missions en freelance</div>
             <div className="h-[40%] w-full flex gap-3 items-center px-3 relative bg-base-100">
               {competences.map((competence, index) =>(
@@ -89,7 +92,10 @@ const competences = [
               ))}
               <div className="absolute inset-0 bg-gradient-to-r from-base-100 via-transparent to-base-100 "></div>
             </div>
-          </div>
+            <div class="w-full h-0 bg-gradient-to-t from-base-600 via-base-400/90 to-base-200 absolute group-hover:h-full bottom-0 left-0 rounded-3xl duration-300 flex items-center justify-center">
+              <span class="scale-0 group-hover:scale-100 duration-500 text-6xl text-white font-bold text-shadow1">Compétences</span>
+            </div>
+          </a>
           {/* Faharoany */}
           <div className="w-1/2 h-full rounded-3xl p-3 gap-3 justify-center items-center flex bg-base-100 ombre hover:-translate-y-3 ease-in-out duration-300 cursor-pointer">
             {liens.map((lien, index)=>(

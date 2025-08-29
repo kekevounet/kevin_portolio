@@ -2,7 +2,8 @@ import { Routes, Route } from "react-router-dom";
 import Index from "./Layouts/Pages/Index";
 import NavBar from "./Layouts/Components/NavBar";
 import Swal from 'sweetalert2';
-import Profil from './Layouts/Pages/Profil';
+import ProfilPhone from './Layouts//Pages/Phone/ProfilPhone';
+import Competence from './Layouts//Pages/Phone/CompetencePhone';
 import { useEffect, useState } from "react";
 export default function App()
 {
@@ -40,7 +41,8 @@ useEffect(() => {
       <NavBar navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       <Routes>
         <Route path='/' element={ <Index navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
-        <Route path='/Profil' element={ <Profil navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
+        <Route path='/Profil' element={ <ProfilPhone navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
+        <Route path='/Competence' element={ <Competence navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
       </Routes>
     </div>
   )

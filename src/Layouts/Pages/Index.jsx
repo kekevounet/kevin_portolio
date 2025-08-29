@@ -1,7 +1,8 @@
 import Accueil from './Accueil';
 import Profil from './Profil';
-import { Parallax } from 'react-scroll-parallax';
+import Projets from './Competence';
 import { useEffect, useState } from 'react';
+import Separation from '../Components/Separation';
 export default function Index(  {navHoverFlou, setNavHoverFlou} )
 {
    // Etat
@@ -32,9 +33,7 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
       )
       :
       (
-        <div className="w-full h-[50vh] fondaka flex items-center justify-center overflow-hidden">
-          <Parallax speed={-40} className='text-[10rem] text-base-900 text-shadow1 font-extrabold tracking-wide'>Profil</Parallax>
-        </div>
+        <Separation text="Profil" navHoverFlou={navHoverFlou}/>
       ) }
 
       {isMobile ?
@@ -52,10 +51,20 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
       )
       :
       (
-        <div className="w-full h-[50vh] fondaka flex items-center justify-center overflow-hidden">
-          <Parallax speed={-40} className='text-[10rem] text-base-900 text-shadow1 font-extrabold tracking-wide'>Projets</Parallax>
-        </div>
+        <Separation text="Compétences" navHoverFlou={navHoverFlou}/>
       ) }
+
+      {isMobile ?
+      (
+        <div className="hidden"></div>
+      )
+      :
+      (
+        <Projets navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
+      ) }
+
+
+
 
     </div>
   )

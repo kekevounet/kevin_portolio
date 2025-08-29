@@ -11,16 +11,16 @@ export default function ProfilLaptop({navHoverFlou}) {
 
           {/* Contenu principal */}
           <div className="z-10">
-            <h1 className="text-5xl font-extrabold leading-tight">Niavo Kevin</h1>
-            <p className="text-2xl font-light mt-2">Développeur Full-Stack Junior</p>
+            <h1 className="text-8xl font-extrabold leading-tight">Niavo Kevin</h1>
+            <p className="text-5xl font-light mt-2">Développeur Full-Stack Junior</p>
 
-            <p className="text-lg italic mt-4">
+            <p className="text-2xl italic mt-4">
               "Ma mission est de transformer des idées innovantes en applications web performantes et intuitives, en combinant une approche méthodique avec une passion pour les technologies modernes. Je m'engage à créer des expériences numériques qui répondent aux défis d'aujourd'hui et préparent les opportunités de demain."
             </p>
 
             <div className="mt-6 border-t border-white border-opacity-30 pt-4">
-              <p className="text-sm font-light leading-relaxed">
-                Fort d'une expertise en **React.js pour le front-end** et **Express.js pour le back-end**, je conçois des solutions complètes et robustes. Mon approche est guidée par les principes du **clean code** et une attention particulière au design et à l'expérience utilisateur. J'aime résoudre des problèmes complexes et m'assurer que chaque ligne de code est à la fois fonctionnelle et élégante.
+              <p className="font-light leading-relaxed">
+                Fort d'une expertise en <span className='font-bold'>React.js pour le front-end</span> et <span className='font-bold'>Express.js pour le back-end</span>, je conçois des solutions complètes et robustes. Mon approche est guidée par les principes du <span className='font-bold'>clean code</span> et une attention particulière au design et à l'expérience utilisateur. J'aime résoudre des problèmes complexes et m'assurer que chaque ligne de code est à la fois fonctionnelle et élégante.
               </p>
             </div>
           </div>
@@ -34,7 +34,7 @@ export default function ProfilLaptop({navHoverFlou}) {
           <div>
             <h2 className="text-3xl font-bold mb-4 text-cyan-600">Comment je peux vous aider ?</h2>
             <p className="text-sm leading-relaxed mb-4">
-              Je construis des **applications web robustes et esthétiques** du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une **architecture solide et un code propre**.
+              Je construis des <span className="font-bold">applications web robustes et esthétiques</span> du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une <span className="font-bold">architecture solide et un code propre</span>.
             </p>
             <ul className="list-disc list-inside text-sm space-y-1 mt-4">
               <li>Développement Front-end avec React JS</li>

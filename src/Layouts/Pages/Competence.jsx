@@ -1,0 +1,35 @@
+import { useEffect, useState } from "react"
+import CompetenceLaptop from "./Laptop/CompetenceLaptop";
+import CompetencePhone from "./Phone/CompetencePhone";
+export default function Accueil(  {navHoverFlou, setNavHoverFlou} )
+{
+  // Etat
+  const [ isMobile, setIsMobile ] = useState(false);
+
+  // Comportement
+  useEffect(()=>
+  {
+    const handleResize = () =>
+    {
+      setIsMobile( window.innerWidth < 768 );
+    }
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [])
+
+  // Affichage
+  return(
+    <div>
+      { isMobile ?
+      (
+        <CompetencePhone />
+      )
+      :
+      (
+        <CompetenceLaptop navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
+      ) }
+    </div>
+  )
+}
