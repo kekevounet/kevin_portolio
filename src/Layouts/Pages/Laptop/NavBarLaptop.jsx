@@ -5,8 +5,7 @@ import { useState } from "react";
 import { CgHomeAlt } from "react-icons/cg";
 import { AiOutlineFolderOpen, AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BiBookContent } from "react-icons/bi";
-import CustomButton from "../../Components/CustomButton";
-export default function NavBar({navHoverFlou, setNavHoverFlou})
+export default function NavBar({navHoverFlou, setNavHoverFlou, onClick})
 {
   // Etat
   const [ navHover, setNavHover ] = useState(false);
@@ -33,6 +32,13 @@ export default function NavBar({navHoverFlou, setNavHoverFlou})
   }
 
 
+onClick = () =>
+{
+  window.location.href = "https://niavo.netlify.app";
+}
+
+
+
 
   return(
     <div className="w-full h-20 mt-2 fixed flex justify-center items-center z-40">
@@ -43,10 +49,8 @@ export default function NavBar({navHoverFlou, setNavHoverFlou})
 
         {/* Le conteneur du bouton Contactez-moi est séparé */}
         <div className="w-1/6 flex h-full justify-around items-center">
-          {/* <button className=" text-lg p-3 rounded-2xl bg-secondaire-500 text-white font-bold cursor-pointer shadow-md w-[55%] text-center">Contactez-moi</button> */}
-          <CustomButton >
-              Contactez-moi
-          </CustomButton>
+          <a href="#Contact" className=" no-underline active:scale-75 duration-75 text-lg p-3 rounded-2xl bg-secondaire-500 text-white font-bold cursor-pointer shadow-md w-[55%] text-center">Contactez-moi</a>
+
           {/* Nouveau conteneur qui ne gère que le menu bars et le menu */}
           <div
             className="relative h-full flex items-center"
@@ -59,7 +63,7 @@ export default function NavBar({navHoverFlou, setNavHoverFlou})
               {navHover ? (<FaBars />) : (<TiThMenuOutline />)}
             </div>
             {navHover && (
-              <div className="absolute w-64 right-0 h-[50vh] bg-base-100 ombre top-[105%] rounded-3xl z-40">
+              <div className="absolute w-64 right-0 h-[50vh] bg-base-100 ombre top-[101%] rounded-3xl z-40">
 
                 {/* Titre menu */}
                 <div className="h-[15%] w-full flex items-center justify-center border-b border-dotted border-base-900 text-3xl font-bold tracking-wide">Menu</div>

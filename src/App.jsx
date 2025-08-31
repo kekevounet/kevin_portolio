@@ -2,8 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import Index from "./Layouts/Pages/Index";
 import NavBar from "./Layouts/Components/NavBar";
 import Swal from 'sweetalert2';
-import ProfilPhone from './Layouts//Pages/Phone/ProfilPhone';
-import Competence from './Layouts//Pages/Phone/CompetencePhone';
+import ProfilPhone from './Layouts/Pages/Phone/ProfilPhone';
+import CompetencePhone from './Layouts/Pages/Phone/CompetencePhone';
+import ContactPhone from './Layouts/Pages/Phone/ContactPhone';
 import { useEffect, useState } from "react";
 export default function App()
 {
@@ -42,7 +43,8 @@ useEffect(() => {
       <Routes>
         <Route path='/' element={ <Index navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
         <Route path='/Profil' element={ <ProfilPhone navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
-        <Route path='/Competence' element={ <Competence navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
+        <Route path='/Competence' element={ <CompetencePhone navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
+        <Route path='/Contact' element={ <ContactPhone navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} /> }  />
       </Routes>
     </div>
   )
