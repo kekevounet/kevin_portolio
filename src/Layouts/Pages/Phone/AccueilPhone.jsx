@@ -63,7 +63,7 @@ const AccueilPhone = () =>
         <img src={Kevin1} alt="Kevin" className='' />
       </div>
       {/* Contenu misy info de base */}
-      <div className="w-[90%] h-[20%] flex items-center justify-center mb-20 bg-base-100 rounded-3xl ombre flex-col overflow-hidden">
+      <div className="w-[90%] h-[200vh] flex items-center justify-center mb-20 bg-base-100 rounded-3xl ombre flex-col overflow-hidden">
         <div className="w-full h-1/2 flex ">
           {competences.map((competence, index) =>(
             <div className="flex items-center px-3 animate-marquee" key={index}>
@@ -71,7 +71,7 @@ const AccueilPhone = () =>
             </div>
           ))}
         </div>
-        <div className="w-full h-1/2 flex items-center justify-around">
+        <div className="w-full h-full flex items-center justify-around">
           {liens.map((lien, index)=>(
             <a
               className="w-12 h-12 rounded-full flex justify-center items-center shadow-md bg-white"

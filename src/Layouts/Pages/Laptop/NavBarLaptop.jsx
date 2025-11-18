@@ -1,11 +1,11 @@
+import { AiOutlineProject } from "react-icons/ai";
 import { TiThMenuOutline } from "react-icons/ti";
-import { FaBars } from "react-icons/fa";
 import Kevin from '../../Assets/Kevin.jpg';
 import { useState } from "react";
 import { CgHomeAlt } from "react-icons/cg";
 import { AiOutlineFolderOpen, AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BiBookContent } from "react-icons/bi";
-export default function NavBar({navHoverFlou, setNavHoverFlou, onClick})
+export default function NavBar({ setNavHoverFlou, onClick})
 {
   // Etat
   const [ navHover, setNavHover ] = useState(false);
@@ -15,6 +15,7 @@ export default function NavBar({navHoverFlou, setNavHoverFlou, onClick})
       { icon: <AiOutlineUser />, label: "Profil", lien: "Profil" },
       { icon: <AiOutlineFolderOpen />, label: "Compétences", lien: "Competences" },
       { icon: <AiOutlineMail />, label: "Contact", lien: "Contact" },
+      { icon: <AiOutlineProject />, label: "Projet", lien: "Projet" },
       { icon: <BiBookContent />, label: "CV", lien: "CV" },
     ]
 
@@ -60,7 +61,7 @@ onClick = () =>
             <div className="text-5xl text-base-900 cursor-pointer pr-5 duration-500">
 
 
-              {navHover ? (<FaBars />) : (<TiThMenuOutline />)}
+              <TiThMenuOutline className={`${navHover ? 'text-cyan-500' : 'text-black'}`} />
             </div>
             {navHover && (
               <div className="absolute w-64 right-0 h-[50vh] bg-base-100 ombre top-[101%] rounded-3xl z-40">

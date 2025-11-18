@@ -4,6 +4,7 @@ import Projets from './Competence';
 import { useEffect, useState } from 'react';
 import Separation from '../Components/Separation';
 import Contact from './Contact'
+import Projet from './Projet';
 export default function Index(  {navHoverFlou, setNavHoverFlou} )
 {
    // Etat
@@ -82,6 +83,25 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
       (
         <Contact navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       ) }
+
+      {isMobile ?
+      (
+        <div className="hidden"></div>
+      )
+      :
+      (
+        <Separation text="Projets" navHoverFlou={navHoverFlou}/>
+      ) }
+
+      {isMobile ?
+      (
+        <div className="hidden"></div>
+      )
+      :
+      (
+        <Projet navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
+      ) }
+
 
 
 

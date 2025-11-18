@@ -71,7 +71,7 @@ export default function Contact({ navHoverFlou }) {
     >
       <div className="w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row">
         {/* Informations */}
-        <div className="w-full h-screen border border-white lg:h-full bg-base-900 lg:ml-20">
+        <div className="w-full h-screen border border-white lg:h-full backdrop-blur-sm lg:ml-20">
           <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b">
             Informations
           </div>
@@ -149,7 +149,7 @@ export default function Contact({ navHoverFlou }) {
         </div>
 
         {/* Formulaire */}
-        <div className="w-full h-screen pb-5 mt-20 border lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0">
+        <div className="w-full h-screen pb-5 mt-20 border lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0 backdrop-blur-sm">
           <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-white">
             Contactez-moi
           </div>

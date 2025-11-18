@@ -5,7 +5,7 @@ import { SiTailwindcss, SiMysql } from 'react-icons/si';
 import { BiGitBranch } from 'react-icons/bi';
 import { IoLogoJavascript } from 'react-icons/io5';
 
-// Vos données de compétences
+// données de compétences
 const competences = [
     { name: 'React JS', icon: <FaReact size={56} className="text-cyan-500" /> },
     { name: 'JavaScript', icon: <IoLogoJavascript size={56} className="text-yellow-400" /> },
