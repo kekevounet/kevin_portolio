@@ -17,7 +17,7 @@ export default function ProjetPhone({ navHoverFlou }) {
       titre: "Stand'Art", img: standart, lien: "https://stand-art.netlify.app/"
     },
     {
-      titre: "Gestion des projets", img: gestionTache, lien: "https://gestion-tache-kevin.netlify.app/"
+      titre: "Gestion des tâches", img: gestionTache, lien: "https://gestion-tache-kevin.netlify.app/"
     },
   ];
 

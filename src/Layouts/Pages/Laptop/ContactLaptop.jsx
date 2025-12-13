@@ -168,7 +168,7 @@ export default function Contact({ navHoverFlou }) {
               onChange={handleChange}
               title="Entrez votre nom"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre nom"
               className="p-2 transition-all duration-300 border border-white outline-none default:bg-transparent rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
               required
@@ -184,7 +184,7 @@ export default function Contact({ navHoverFlou }) {
               onChange={handleChange}
               title="Entrez votre Email"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre Email"
               className="p-2 transition-all duration-300 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
               required
@@ -211,7 +211,7 @@ export default function Contact({ navHoverFlou }) {
                 value="Envoyer"
                 className="w-full p-3 text-lg font-bold text-white border border-base-500 rounded-2xl bg-base-900 hover:bg-base-700 hover:border-base-900"
                 initial={{ scale: 1 }}
-                whileTap={{ scale: 0.5 }}
+                whileTap={{ scale: 0.01 }}
               />
             </div>
           </form>
