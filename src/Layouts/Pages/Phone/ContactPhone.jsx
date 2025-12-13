@@ -67,7 +67,7 @@ export default function Contact() {
   return (
     <div
       id="Contact"
-      className={`flex items-center justify-center w-full h-full lg:h-screen pb-[50rem] mb- lg:p-0 selection:bg-base-900 bg-base-900 `}
+      className={`flex items-center justify-center w-full h-full lg:h-screen pb-[60rem] mb- lg:p-0 selection:bg-base-900 bg-base-900 `}
     >
       <div className="w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row">
         {/* Informations */}
@@ -168,7 +168,7 @@ export default function Contact() {
               onChange={handleChange}
               title="Entrez votre nom"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre nom"
               className="p-2 transition-all duration-300 border border-white outline-none default:bg-transparent rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
               required
@@ -184,7 +184,7 @@ export default function Contact() {
               onChange={handleChange}
               title="Entrez votre Email"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre Email"
               className="p-2 transition-all duration-300 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
               required
@@ -199,7 +199,7 @@ export default function Contact() {
               onChange={handleChange}
               title="Entrez votre message"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre message"
               className="p-2 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 h-[20vh] resize-none focus:bg-base-900 transition-all duration-300 focus:text-white"
               required

@@ -33,6 +33,7 @@ useEffect(() => {
     if (accept) {
       Swal.fire("Je vous remercie pour votre comprehension.");
     }
+
   };
 
   showTermsAndConditions();

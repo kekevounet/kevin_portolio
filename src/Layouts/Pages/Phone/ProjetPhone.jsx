@@ -1,6 +1,7 @@
 import kevTravel from "../../Assets/kev-travel.png";
 import gestionProjet from "../../Assets/gestion-projet.png";
 import standart from "../../Assets/standart.png";
+import gestionTache from "../../Assets/gestion-tache.png"
 import { Link } from "react-router-dom";
 
 export default function ProjetPhone({ navHoverFlou }) {
@@ -14,7 +15,10 @@ export default function ProjetPhone({ navHoverFlou }) {
     },
     {
       titre: "Stand'Art", img: standart, lien: "https://stand-art.netlify.app/"
-    }
+    },
+    {
+      titre: "Gestion des projets", img: gestionTache, lien: "https://gestion-tache-kevin.netlify.app/"
+    },
   ];
 
     return (

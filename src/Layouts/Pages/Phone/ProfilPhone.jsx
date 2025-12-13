@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ProfilMobile() {
   return (
-    <div className="w-full h-screen p-5 flex flex-col justify-start bg-base-900 font-sans text-base-100 overflow-y-auto">
+    <div className="w-full h-screen px-3 py-5 flex flex-col justify-start bg-base-900 font-sans text-base-100 overflow-y-auto">
       {/* Section Principale : Nom, Rôle, Mission & Vision */}
       <div className="w-full h-auto flex flex-col items-center text-center mt-6">
         <h1 className="text-4xl font-extrabold text-base-100 tracking-wide leading-tight">

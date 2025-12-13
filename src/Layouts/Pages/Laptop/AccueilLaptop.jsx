@@ -83,7 +83,7 @@ const competences = [
         <div className="w-full h-1/3 flex justify-between flex-row items-center gap-3">
           {/* Voalohany */}
           <a href="#Competences" className="no-underline w-2/3 h-full bg-base-100 ombre rounded-3xl overflow-hidden hover:-translate-y-3 ease-in-out duration-300 cursor-pointer group relative">
-            <div className="h-[60%] w-full flex items-center px-3 text-3xl font-bold text-base-900">Disponible pour des missions en freelance</div>
+            <div className="h-[60%] w-full flex items-center px-3 text-3xl font-bold text-base-900">Disponible pour des missions ou contrats</div>
             <div className="h-[40%] w-full flex gap-3 items-center px-3 relative bg-base-100">
               {competences.map((competence, index) =>(
                 <div className="flex items-center px-3 animate-marquee" key={index}>

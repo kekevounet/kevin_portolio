@@ -49,13 +49,13 @@ const AccueilPhone = () =>
 
   // Affichage
   return (
-    <div className={`bg-gradient-to-b from-base-900 via-base-700 to-base-400 text-base-100 h-screen py-3 flex flex-col gap-5 items-center`}>
+    <div className={`bg-gradient-to-b from-base-900 via-base-700 to-base-400 text-base-100 h-full py-3 flex flex-col gap-5 items-center`}>
 
       {/* Contenu misy anarana */}
       <div className="w-full h-[10%] items-center justify-center flex flex-col">
         <span className='text-2xl font-bold'>MAMINIRINA Niavo Kevin</span>
         <span className='text-lg font-bold italic mt-2'>Développeur fullstack</span>
-        <span className='text-lg font-bold italic'>Disponible pour des missions en freelance</span>
+        <span className='text-lg font-bold italic'>Disponible pour des missions ou contrats</span>
       </div>
 
       {/* Contenu misy sary */}
@@ -63,7 +63,7 @@ const AccueilPhone = () =>
         <img src={Kevin1} alt="Kevin" className='' />
       </div>
       {/* Contenu misy info de base */}
-      <div className="w-[90%] h-[200vh] flex items-center justify-center mb-20 bg-base-100 rounded-3xl ombre flex-col overflow-hidden">
+      <div className="w-[90%] h-[17vh] flex items-center justify-center mb-20 bg-base-100 rounded-3xl ombre flex-col overflow-hidden">
         <div className="w-full h-1/2 flex ">
           {competences.map((competence, index) =>(
             <div className="flex items-center px-3 animate-marquee" key={index}>
