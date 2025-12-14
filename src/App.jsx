@@ -5,6 +5,7 @@ import Swal from 'sweetalert2';
 import ProfilPhone from './Layouts/Pages/Phone/ProfilPhone';
 import CompetencePhone from './Layouts/Pages/Phone/CompetencePhone';
 import ContactPhone from './Layouts/Pages/Phone/ContactPhone';
+import CVPhone from './Layouts/Pages/Phone/ContactPhone';
 import ProjetPhone from "./Layouts/Pages/Phone/ProjetPhone";
 import { useEffect, useState } from "react";
 export default function App()
@@ -48,6 +49,7 @@ useEffect(() => {
         <Route path='/Competence' element={ <CompetencePhone /> }  />
         <Route path='/Contact' element={ <ContactPhone /> }  />
         <Route path='/Projet' element={ <ProjetPhone /> }  />
+        <Route path='/CVPhone' element={ <CVPhone /> }  />
       </Routes>
     </div>
   )

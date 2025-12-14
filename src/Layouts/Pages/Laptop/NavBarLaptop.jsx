@@ -11,12 +11,12 @@ export default function NavBar({ setNavHoverFlou, onClick})
   const [ navHover, setNavHover ] = useState(false);
 
    const menus = [
-      { icon: <CgHomeAlt />, label: "Accueil", lien: "Accueil" },
-      { icon: <AiOutlineUser />, label: "Profil", lien: "Profil" },
-      { icon: <AiOutlineFolderOpen />, label: "Compétences", lien: "Competences" },
-      { icon: <AiOutlineMail />, label: "Contact", lien: "Contact" },
-      { icon: <AiOutlineProject />, label: "Projet", lien: "Projet" },
-      { icon: <BiBookContent />, label: "CV", lien: "CV" },
+      { icon: <CgHomeAlt />, label: "Accueil", lien: "#Accueil" },
+      { icon: <AiOutlineUser />, label: "Profil", lien: "#Profil" },
+      { icon: <AiOutlineFolderOpen />, label: "Compétences", lien: "#Competences" },
+      { icon: <AiOutlineMail />, label: "Contact", lien: "#Contact" },
+      { icon: <AiOutlineProject />, label: "Projet", lien: "#Projet" },
+      { icon: <BiBookContent />, label: "Télécharger CV", lien: "/CV_MAMINIRINA_Niavo_kevin.pdf", download:true },
     ]
 
   // Comportement
@@ -64,7 +64,7 @@ onClick = () =>
               <TiThMenuOutline className={`${navHover ? 'text-cyan-500' : 'text-black'}`} />
             </div>
             {navHover && (
-              <div className="absolute w-64 right-0 h-[50vh] bg-base-100 ombre top-[101%] rounded-3xl z-40">
+              <div className="absolute w-72 right-0 h-[50vh] bg-base-100 ombre top-[101%] rounded-3xl z-40">
 
                 {/* Titre menu */}
                 <div className="h-[15%] w-full flex items-center justify-center border-b border-dotted border-base-900 text-3xl font-bold tracking-wide">Menu</div>
@@ -72,7 +72,7 @@ onClick = () =>
                 {/* Contenu NavBar */}
                 <div className="h-[85%] w-full flex flex-col items-center justify-center p-3 space-y-1 duration-500 delay-300">
                   {menus.map((menu,index)=>(
-                    <a className="flex items-center w-full group justify-center cursor-pointer p-3 hover:bg-slate-200 rounded-3xl text-black no-underline relative" key={index} href={`#${menu.lien}`}>
+                    <a className="flex items-center w-full group justify-center cursor-pointer p-3 hover:bg-slate-200 rounded-3xl text-black no-underline relative" key={index} href={`${menu.lien}`} download={menu.download ? true : undefined}>
                       <span className="text-2xl absolute left-3 group-hover:text-secondaire-500">{menu.icon}</span>
                       <span className="text-2xl group-hover:text-secondaire-500">{menu.label}</span>
                       <span className="w-0 group-hover:w-20 absolute left-1/2 h-1 duration-300 bottom-0 bg-secondaire-500"></span>

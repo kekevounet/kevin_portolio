@@ -104,8 +104,6 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
 
 
 
-
-
     </div>
   )
 }
