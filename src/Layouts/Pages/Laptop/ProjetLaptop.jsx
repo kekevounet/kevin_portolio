@@ -2,11 +2,15 @@ import kevTravel from "../../Assets/kev-travel.png";
 import gestionProjet from "../../Assets/gestion-projet.png";
 import standart from "../../Assets/standart.png";
 import gestionTache from "../../Assets/gestion-tache.png";
+import gestionTransportCommun from "../../Assets/gestion-transport-commun.png"
 import { Link } from "react-router-dom";
 
 export default function ProjetLaptop({ navHoverFlou })
 {
   const projets = [
+    {
+      titre: "Gestion de transport en commun", img: gestionTransportCommun, lien: "https://gestion-transport.netlify.app/"
+    },
     {
       titre: "Kev's Travel", img: kevTravel, lien: "https://kev-travel.netlify.app/"
     },
@@ -35,7 +39,7 @@ export default function ProjetLaptop({ navHoverFlou })
           <Link className="w-full h-full border-white border-b no-underline" key={index}  to={`${projet.lien}`} target="_blank" rel="noopener noreferrer">
             {/* Image */}
             <div className="w-full h-[80%] overflow-hidden">
-              <img src={projet.img} alt="" className="object-cover w-full h-full" />
+              <img src={projet.img} alt="" className="object-cover w-full h-full hover:scale-105 duration-200" />
             </div>
             {/* Texte */}
             <div className="w-full h-[20%] text-white font-bold text-xl flex items-center justify-center backdrop-blur-sm">{projet.titre}</div>
