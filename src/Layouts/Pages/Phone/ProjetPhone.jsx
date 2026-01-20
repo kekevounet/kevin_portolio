@@ -12,7 +12,7 @@ export default function ProjetPhone({ navHoverFlou }) {
       img: gestionTransportCommun,
       lien: "https://gestion-transport.netlify.app/",
       description:
-        "Application web permettant la gestion des lignes, des arrêts et des horaires de transport en commun.",
+        "Application web permettant la gestion de coopératives, des revenus, et ainsi de voir des chauffeurs ou bus disponibles",
       technologies: ["React", "Tailwind CSS"]
     },
     {
