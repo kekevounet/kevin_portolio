@@ -66,23 +66,7 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
       ) }
 
 
-      {isMobile ?
-      (
-        <div className="hidden"></div>
-      )
-      :
-      (
-        <Separation text="Contact" navHoverFlou={navHoverFlou}/>
-      ) }
 
-       {isMobile ?
-      (
-        <div className="hidden"></div>
-      )
-      :
-      (
-        <Contact navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
-      ) }
 
       {isMobile ?
       (
@@ -102,6 +86,23 @@ export default function Index(  {navHoverFlou, setNavHoverFlou} )
         <Projet navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
       ) }
 
+      {isMobile ?
+      (
+        <div className="hidden"></div>
+      )
+      :
+      (
+        <Separation text="Contact" navHoverFlou={navHoverFlou}/>
+      ) }
+
+       {isMobile ?
+      (
+        <div className="hidden"></div>
+      )
+      :
+      (
+        <Contact navHoverFlou={navHoverFlou} setNavHoverFlou={setNavHoverFlou} />
+      ) }
 
 
     </div>
