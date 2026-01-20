@@ -199,7 +199,7 @@ export default function Contact({ navHoverFlou }) {
               onChange={handleChange}
               title="Entrez votre message"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.5 }}
+              whileTap={{ scale: 1.1 }}
               placeholder="Veuillez entrer votre message"
               className="p-2 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 h-[20vh] resize-none focus:bg-base-900 transition-all duration-300 focus:text-white"
               required
