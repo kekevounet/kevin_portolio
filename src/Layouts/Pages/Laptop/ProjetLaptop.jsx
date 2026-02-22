@@ -43,12 +43,12 @@ export default function ProjetLaptop({ navHoverFlou })
   return(
     <div className={`w-full h-screen   ${navHoverFlou ? 'blur-md' : '' } `} id="Projet">
       {/* Texte mba ho affichageny fotsiny */}
-      <div className="w-full h-[20%] flex items-end justify-center text-3xl p-3 font-bold text-white">
+      <div className="w-full h-[10%] flex items-center justify-center text-3xl p-3 font-bold text-white">
         Quelques projets réalisés, d'autres en cours
       </div>
 
       {/* Contenu */}
-      <div className="w-full h-[80%] grid grid-cols-3 grid-rows-2 gap-3 px-5">
+      <div className="w-full h-[90%] grid grid-cols-3 grid-rows-2 gap-3 px-5">
 
         {/* Ito no atao boucle */}
         {projets.map((projet, index)=>(

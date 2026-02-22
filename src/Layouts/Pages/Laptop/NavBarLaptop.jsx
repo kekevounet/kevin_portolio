@@ -5,6 +5,7 @@ import { useState } from "react";
 import { CgHomeAlt } from "react-icons/cg";
 import { AiOutlineFolderOpen, AiOutlineMail, AiOutlineUser } from "react-icons/ai";
 import { BiBookContent } from "react-icons/bi";
+import { Tooltip } from "react-tooltip";
 export default function NavBar({ setNavHoverFlou, onClick})
 {
   // Etat
@@ -14,8 +15,8 @@ export default function NavBar({ setNavHoverFlou, onClick})
       { icon: <CgHomeAlt />, label: "Accueil", lien: "#Accueil" },
       { icon: <AiOutlineUser />, label: "Profil", lien: "#Profil" },
       { icon: <AiOutlineFolderOpen />, label: "Compétences", lien: "#Competences" },
-      { icon: <AiOutlineMail />, label: "Contact", lien: "#Contact" },
       { icon: <AiOutlineProject />, label: "Projet", lien: "#Projet" },
+      { icon: <AiOutlineMail />, label: "Contact", lien: "#Contact" },
       { icon: <BiBookContent />, label: "Télécharger CV", lien: "/CV_MAMINIRINA_Niavo_kevin.pdf", download:true },
     ]
 
@@ -44,13 +45,14 @@ onClick = () =>
   return(
     <div className="w-full h-20 mt-2 fixed flex justify-center items-center z-40">
       <div className="w-[98%] h-full bg-base-100 ombre rounded-3xl flex items-center bg-opacity-95 justify-between relative">
-        <div className="w-16 h-16 rounded-full bg-fond ml-5 overflow-hidden">
+        <a href="https://niavo.netlify.app" className="w-16 h-16 rounded-full bg-fond ml-5 overflow-hidden">
           <img src={Kevin} alt="Mon aperçu" className="w-full h-full object-cover" />
-        </div>
+        </a>
 
         {/* Le conteneur du bouton Contactez-moi est séparé */}
         <div className="w-1/6 flex h-full justify-around items-center">
-          <a href="#Contact" className=" no-underline active:scale-75 duration-75 text-lg p-3 rounded-2xl bg-secondaire-500 text-white font-bold cursor-pointer shadow-md w-[55%] text-center">Contactez-moi</a>
+          <a href="#Contact" data-tooltip-content="Contactez-moi" data-tooltip-id="Contact-tooltip" className=" no-underline active:scale-75 duration-75 text-lg p-3 rounded-2xl bg-secondaire-500 text-white font-bold cursor-pointer shadow-md w-[55%] text-center">Contactez-moi</a>
+          <Tooltip id="Contact-tooltip" place="bottom" className="z-50" />
 
           {/* Nouveau conteneur qui ne gère que le menu bars et le menu */}
           <div

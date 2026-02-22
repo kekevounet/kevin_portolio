@@ -1,3 +1,4 @@
+import { SiTypescript } from "react-icons/si";
 import Kevin1 from '../../Assets/kevin1.png';
 // src/components/HomePage.jsx
 import React from 'react';
@@ -6,7 +7,6 @@ import { SiMysql } from "react-icons/si";
 import { BiGitBranch } from "react-icons/bi";
 import { AiFillGithub } from "react-icons/ai";
 import { FaPython } from "react-icons/fa";
-import { FaLaravel } from "react-icons/fa";
 import { TbBrandReactNative } from "react-icons/tb";
 import { FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
@@ -27,7 +27,7 @@ const AccueilPhone = () =>
     { icon: <FaReact /> },
     { icon: <FaNodeJs /> },
     { icon: <TbBrandDjango /> },
-    { icon: <FaLaravel /> },
+    { icon: <SiTypescript /> },
     { icon: <AiFillHtml5 /> },
     { icon: <FaCss3Alt /> },
     { icon: <SiTailwindcss /> },

@@ -170,7 +170,7 @@ export default function Contact() {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre nom"
-              className="p-2 transition-all duration-300 border border-white outline-none default:bg-transparent rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
+              className="p-2 transition-opacity duration-300 border border-white outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -186,7 +186,7 @@ export default function Contact() {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre Email"
-              className="p-2 transition-all duration-300 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
+              className="p-2 transition-opacity duration-300 border border-white outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -201,7 +201,7 @@ export default function Contact() {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre message"
-              className="p-2 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 h-[20vh] resize-none focus:bg-base-900 transition-all duration-300 focus:text-white"
+              className="p-2 border border-white outline-none h-[20vh] resize-none transition-opacity duration-300 rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 

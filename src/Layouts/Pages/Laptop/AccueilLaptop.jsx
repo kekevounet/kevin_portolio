@@ -1,4 +1,4 @@
-import { FaLaravel } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 
 import { TbBrandVscode } from "react-icons/tb";
 import { SiMysql } from "react-icons/si";
@@ -33,7 +33,7 @@ const competences = [
   { icon: <FaReact /> },
   { icon: <FaNodeJs /> },
   { icon: <TbBrandDjango /> },
-  { icon: <FaLaravel /> },
+  { icon: <SiTypescript /> },
   { icon: <AiFillHtml5 /> },
   { icon: <FaCss3Alt /> },
   { icon: <SiTailwindcss /> },

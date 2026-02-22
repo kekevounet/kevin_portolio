@@ -67,17 +67,17 @@ export default function Contact({ navHoverFlou }) {
   return (
     <div
       id="Contact"
-      className={`flex items-center justify-center w-full h-full lg:h-screen pb-96 lg:p-0 selection:bg-base-900  ${navHoverFlou ? 'blur-md' : '' }`}
+      className={`flex items-center justify-center w-full h-full lg:h-screen pb-96 lg:p-0  ${navHoverFlou ? 'blur-md' : '' }`}
     >
       <div className="w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row">
         {/* Informations */}
-        <div className="w-full h-screen border border-white lg:h-full backdrop-blur-sm lg:ml-20">
-          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b">
+        <div className="w-full h-screen border border-base-500 lg:h-full backdrop-blur-sm lg:ml-20">
+          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-base-500">
             Informations
           </div>
           <div className="w-full h-screen lg:h-[90.9%] mt-1 flex flex-col lg:flex-row">
             {/* Côté gauche */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-r border-white lg:h-full">
+            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-r border-base-500 lg:h-full">
               <div className="flex items-center p-3 cursor-not-allowed hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4">
                 <BsTelephone className="absolute mr-3 left-5 lg:static" /> : 0389423351
               </div>
@@ -116,8 +116,8 @@ export default function Contact({ navHoverFlou }) {
             </div>
 
             {/* Côté droite */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-t border-white lg:h-full lg:border-none">
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
+            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-t border-base-500 lg:h-full lg:border-none">
+              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-base-500 h-1/2">
                 <div className="flex items-center justify-center">
                   <AiOutlineUser className="absolute mr-3 left-5 lg:static" /> MAMINIRINA Niavo Kevin
                 </div>
@@ -130,13 +130,13 @@ export default function Contact({ navHoverFlou }) {
               </div>
 
               {/* Map */}
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                <div className="w-full h-[98%] bg-white border border-white">
+              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-base-500 h-1/2">
+                <div className="w-full h-[98%] bg-white border border-base-500">
                   <iframe
                     title="Location de Niavo Kevin"
                     width="100%"
                     height="100%"
-                    className="object-cover border-2 border-white w-full h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
+                    className="object-cover border-2 border-base-500 w-full h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen
@@ -149,8 +149,8 @@ export default function Contact({ navHoverFlou }) {
         </div>
 
         {/* Formulaire */}
-        <div className="w-full h-screen pb-5 mt-20 border lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0 backdrop-blur-sm">
-          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-white">
+        <div className="w-full h-screen pb-5 mt-20 border border-base-500 lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0 backdrop-blur-sm">
+          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-base-500">
             Contactez-moi
           </div>
 
@@ -170,7 +170,7 @@ export default function Contact({ navHoverFlou }) {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre nom"
-              className="p-2 transition-all duration-300 border border-white outline-none default:bg-transparent rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
+              className="p-2 transition-opacity duration-300 border border-base-500 outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -186,7 +186,7 @@ export default function Contact({ navHoverFlou }) {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre Email"
-              className="p-2 transition-all duration-300 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 focus:bg-base-900 focus:text-white"
+              className="p-2 transition-opacity duration-300 border border-base-500 outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -199,9 +199,9 @@ export default function Contact({ navHoverFlou }) {
               onChange={handleChange}
               title="Entrez votre message"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.1 }}
+              whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre message"
-              className="p-2 border border-white outline-none rounded-2xl outline-1 focus:outline-white outline-offset-1 h-[20vh] resize-none focus:bg-base-900 transition-all duration-300 focus:text-white"
+              className="p-2 border border-base-500 outline-none h-[20vh] resize-none transition-opacity duration-300 rounded-md  ring-cyan-600 focus:ring-4"
               required
             />
 

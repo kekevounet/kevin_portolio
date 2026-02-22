@@ -7,7 +7,7 @@ export default function ProfilLaptop({navHoverFlou}) {
       <div className="w-full h-[60%] flex items-end justify-center">
         <div className="h-[85%] w-full rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 relative flex flex-col justify-end p-8 text-white shadow-lg overflow-hidden">
           {/* Un cercle décoratif en haut à droite pour le dynamisme */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 shadow-md rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
 
           {/* Contenu principal */}
           <div className="z-10">
