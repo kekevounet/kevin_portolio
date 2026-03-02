@@ -11,9 +11,9 @@ export default function NavBarPhone()
   const menus = [
     { icon: <CgHomeAlt />, label: "Accueil", lien : '' },
     { icon: <AiOutlineUser />, label: "Profil", lien : 'Profil' },
-    { icon: <AiOutlineFolderOpen />, label: "Competénce", lien : 'Competence' },
-    { icon: <AiOutlineMail />, label: "Contact", lien : 'Contact' },
-    { icon: <AiOutlineProject />, label: "Projet", lien: "Projet" },
+    { icon: <AiOutlineFolderOpen />, label: "Competénces", lien : 'Competence' },
+    { icon: <AiOutlineMail />, label: "Contacts", lien : 'Contact' },
+    { icon: <AiOutlineProject />, label: "Projets", lien: "Projet" },
     { icon: <BiBookContent />, label: "CV", lien : 'CV_MAMINIRINA_Niavo_kevin.pdf', download: true },
   ];
   const handleDownload = () =>
@@ -27,7 +27,7 @@ export default function NavBarPhone()
 
   // Affichage
   return(
-    <div className="w-full fixed h-20 bottom-0 left-0 bg-slate-900 flex items-center justify-around text-base-100 z-50">
+    <div className="w-full fixed h-20 bottom-0 left-0 bg-slate-900 flex items-center justify-around text-base-100 z-50 shadow-[0px_-5px_5px_rgba(14,22,21,0.75)]">
       {menus.map((menu,index)=>(
         menu.download
           ?
@@ -42,7 +42,7 @@ export default function NavBarPhone()
               <span className="text-xs">{menu.label}</span>
             </a>)
             :
-            ( <NavLink className={(({ isActive })=>`flex items-center flex-col w-full relative text-base-100 no-underline p-2 ${isActive ? 'border-b border-white' : 'border-none'} `)} key={index} to={`/${menu.lien}`}  download={menu.download ? true : undefined}>
+            ( <NavLink className={(({ isActive })=>`flex items-center flex-col w-full relative text-base-100 no-underline p-2 ${isActive ? 'border-b border-white -translate-y-2' : 'border-none'} `)} key={index} to={`/${menu.lien}`}  download={menu.download ? true : undefined}>
                 <span className="text-2xl">{menu.icon}</span>
                 <span className="text-xs">{menu.label}</span>
               </NavLink>)

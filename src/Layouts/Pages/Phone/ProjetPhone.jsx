@@ -3,17 +3,26 @@ import gestionProjet from "../../Assets/gestion-projet.png";
 import standart from "../../Assets/standart.png";
 import gestionTache from "../../Assets/gestion-tache.png";
 import gestionTransportCommun from "../../Assets/gestion-transport-commun.png";
+import gestionClinique from "../../Assets/gestion-clinique.png"
 import { Link } from "react-router-dom";
 
 export default function ProjetPhone({ navHoverFlou }) {
   const projets = [
+    {
+      titre: "Gestion d'un clinique",
+      img: gestionClinique,
+      lien: "https://gestion-clinique.netlify.app/",
+      description:
+        "Application pour gérer un clinique, fonctionnelles et efficace",
+      technologies: [ 'TypeScript', "Vite", 'React', "Tailwind CSS" ]
+    },
     {
       titre: "Gestion de transport en commun",
       img: gestionTransportCommun,
       lien: "https://gestion-transport.netlify.app/",
       description:
         "Application web permettant la gestion de coopératives, des revenus, et ainsi de voir des chauffeurs ou bus disponibles",
-      technologies: ["React", "Tailwind CSS"]
+      technologies: [ "JavaScript", "React", "Tailwind CSS"]
     },
     {
       titre: "Kev's Travel",
@@ -21,7 +30,7 @@ export default function ProjetPhone({ navHoverFlou }) {
       lien: "https://kev-travel.netlify.app/",
       description:
         "Plateforme de voyage permettant de découvrir des destinations et d’organiser ses déplacements.",
-      technologies: ["React", "CSS"]
+      technologies: ["Javascript", "React", "Tailwind CSS"]
     },
     {
       titre: "Gestion des projets",
@@ -56,7 +65,7 @@ export default function ProjetPhone({ navHoverFlou }) {
         navHoverFlou ? "blur-md" : ""
       }`}
     >
-      <div className="grid grid-cols-1 gap-6 p-4">
+      <div className="grid grid-cols-1 gap-6 p-3">
         {projets.map((projet, index) => (
           <Link
             key={index}

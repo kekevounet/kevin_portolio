@@ -2,13 +2,20 @@ import kevTravel from "../../Assets/kev-travel.png";
 import gestionProjet from "../../Assets/gestion-projet.png";
 import standart from "../../Assets/standart.png";
 import gestionTache from "../../Assets/gestion-tache.png";
-import gestionTransportCommun from "../../Assets/gestion-transport-commun.png"
+import gestionTransportCommun from "../../Assets/gestion-transport-commun.png";
+import gestionClinique from '../../Assets/gestion-clinique.png';
 import { Link } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 
 export default function ProjetLaptop({ navHoverFlou })
 {
   const projets = [
+    {
+      titre: "Gestion d'un clinique",
+      img: gestionClinique,
+      lien: "https://gestion-clinique.netlify.app/",
+      tooltip: "Application pour gérer un clinique, fonctionnelles et efficace avec TypeScript, Vite, React et Tailwind CSS"
+    },
     {
       titre: "Gestion de transport en commun",
       img: gestionTransportCommun,
@@ -39,6 +46,7 @@ export default function ProjetLaptop({ navHoverFlou })
       lien: "https://gestion-tache-kevin.netlify.app/",
       tooltip: "Application simple et efficace pour organiser ses tâches quotidiennes"
     },
+
   ];
   return(
     <div className={`w-full h-screen   ${navHoverFlou ? 'blur-md' : '' } `} id="Projet">
