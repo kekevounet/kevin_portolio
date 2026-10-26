@@ -9,14 +9,12 @@ import Swal from 'sweetalert2'
 import React from "react";
 
 export default function Contact({ navHoverFlou }) {
-  // État local pour inputs contrôlés
   const [formData, setFormData] = React.useState({
     nom: "",
     email: "",
     message: ""
   });
 
-  // Handler input change
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -24,7 +22,6 @@ export default function Contact({ navHoverFlou }) {
     }));
   };
 
-  // Envoi du formulaire
   const onSubmit = async (event) => {
     event.preventDefault();
 
@@ -50,7 +47,6 @@ export default function Contact({ navHoverFlou }) {
           text: "Tu auras une réponse de la part de Kevin sous peu.",
           icon: "success"
         });
-        // Reset formulaire
         setFormData({ nom: "", email: "", message: "" });
       } else {
         throw new Error("Erreur lors de l'envoi.");
@@ -67,76 +63,82 @@ export default function Contact({ navHoverFlou }) {
   return (
     <div
       id="Contact"
-      className={`flex items-center justify-center w-full h-full lg:h-screen pb-96 lg:p-0  ${navHoverFlou ? 'blur-md' : '' }`}
+      className={`w-full min-h-screen lg:h-screen flex items-center justify-center py-24 lg:py-0 ${navHoverFlou ? 'blur-md' : '' }`}
     >
-      <div className="w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row">
+      <div className="w-full lg:h-[80%] px-4 sm:px-6 lg:px-0 flex justify-center lg:justify-between items-stretch gap-5 flex-col lg:flex-row">
         {/* Informations */}
-        <div className="w-full h-screen border border-base-500 lg:h-full backdrop-blur-sm lg:ml-20">
+        <div className="w-full lg:h-full border border-base-500 backdrop-blur-sm lg:ml-20 flex flex-col">
           <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-base-500">
             Informations
           </div>
-          <div className="w-full h-screen lg:h-[90.9%] mt-1 flex flex-col lg:flex-row">
+          <div className="w-full flex flex-col lg:flex-row lg:flex-1">
             {/* Côté gauche */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-r border-base-500 lg:h-full">
-              <div className="flex items-center p-3 cursor-not-allowed hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4">
-                <BsTelephone className="absolute mr-3 left-5 lg:static" /> : 0389423351
+            <div className="flex flex-col items-center justify-center w-full py-6 lg:py-0 space-y-3 lg:space-y-5 text-base sm:text-lg lg:text-xl font-bold text-white lg:border-r border-base-500 lg:h-full px-4">
+              <div className="flex items-center gap-3 p-3 cursor-not-allowed hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4">
+                <BsTelephone className="shrink-0" />
+                <span>: 0389423351</span>
               </div>
               <a
                 href="https://wa.me/0389423351"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
+                className="flex items-center gap-3 p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
               >
-                <BsWhatsapp className="absolute mr-3 left-5 lg:static" /> : 0389423351
+                <BsWhatsapp className="shrink-0" />
+                <span>: 0389423351</span>
               </a>
               <a
                 href="https://www.linkedin.com/in/kevin-niavo-39a541286/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
+                className="flex items-center gap-3 p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
               >
-                <FiLinkedin className="absolute mr-3 left-5 lg:static" /> : Niavo Kevin
+                <FiLinkedin className="shrink-0" />
+                <span>: Niavo Kevin</span>
               </a>
               <a
                 href="https://web.facebook.com/niavo.kevin"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
+                className="flex items-center gap-3 p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
               >
-                <CiFacebook className="absolute mr-3 left-5 lg:static" /> : Niavo Kevin
+                <CiFacebook className="shrink-0" />
+                <span>: Niavo Kevin</span>
               </a>
               <a
                 href="mailto:niavo.kevin9@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
+                className="flex items-center gap-3 p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
               >
-                <AiOutlineMail className="absolute mr-3 left-5 lg:static" /> : niavo.kevin9@gmail.com
+                <AiOutlineMail className="shrink-0" />
+                <span>: niavo.kevin9@gmail.com</span>
               </a>
             </div>
 
             {/* Côté droite */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-t border-base-500 lg:h-full lg:border-none">
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-base-500 h-1/2">
-                <div className="flex items-center justify-center">
-                  <AiOutlineUser className="absolute mr-3 left-5 lg:static" /> MAMINIRINA Niavo Kevin
+            <div className="flex flex-col items-center justify-between w-full border-t lg:border-t-0 border-base-500 lg:h-full py-6 lg:py-0">
+              <div className="flex flex-col items-center justify-center w-full space-y-3 lg:space-y-5 text-base sm:text-lg lg:text-xl font-bold text-white py-4 lg:py-0 lg:h-1/2">
+                <div className="flex items-center gap-3 px-4">
+                  <AiOutlineUser className="shrink-0" />
+                  <span>MAMINIRINA Niavo Kevin</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <BiCodeAlt className="absolute mr-3 left-5 lg:static" /> Développeur fullstack JS Junior
+                <div className="flex items-center gap-3 px-4">
+                  <BiCodeAlt className="shrink-0" />
+                  <span>Développeur fullstack JS Junior</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <FaMapMarkerAlt className="absolute mr-3 left-5 lg:static" /> Itaosy Antananarivo Madagascar
+                <div className="flex items-center gap-3 px-4">
+                  <FaMapMarkerAlt className="shrink-0" />
+                  <span>Itaosy Antananarivo Madagascar</span>
                 </div>
               </div>
 
               {/* Map */}
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-base-500 h-1/2">
-                <div className="w-full h-[98%] bg-white border border-base-500">
+              <div className="w-full px-4 lg:px-2 lg:h-1/2 flex items-stretch">
+                <div className="w-full h-48 lg:h-full bg-white border border-base-500">
                   <iframe
                     title="Location de Niavo Kevin"
-                    width="100%"
-                    height="100%"
-                    className="object-cover border-2 border-base-500 w-full h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
+                    className="w-full h-full block"
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen
@@ -149,19 +151,20 @@ export default function Contact({ navHoverFlou }) {
         </div>
 
         {/* Formulaire */}
-        <div className="w-full h-screen pb-5 mt-20 border border-base-500 lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0 backdrop-blur-sm">
+        <div className="w-full lg:w-1/2 border border-base-500 lg:h-full lg:mr-20 backdrop-blur-sm flex flex-col">
           <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-base-500">
             Contactez-moi
           </div>
 
           <form
-            className="w-full h-[90%] mt-1 p-2 flex flex-col space-y-3 justify-center"
+            className="w-full p-4 lg:p-2 flex flex-col space-y-3 flex-1 justify-center"
             onSubmit={onSubmit}
           >
             <label htmlFor="nom" className="text-lg font-bold text-white">
               Nom
             </label>
             <motion.input
+              id="nom"
               type="text"
               name="nom"
               value={formData.nom}
@@ -170,7 +173,7 @@ export default function Contact({ navHoverFlou }) {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre nom"
-              className="p-2 transition-opacity duration-300 border border-base-500 outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
+              className="p-2 transition-opacity duration-300 border border-base-500 outline-none bg-white text-gray-900 rounded-md ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -178,6 +181,7 @@ export default function Contact({ navHoverFlou }) {
               Email
             </label>
             <motion.input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -186,7 +190,7 @@ export default function Contact({ navHoverFlou }) {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre Email"
-              className="p-2 transition-opacity duration-300 border border-base-500 outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
+              className="p-2 transition-opacity duration-300 border border-base-500 outline-none bg-white text-gray-900 rounded-md ring-cyan-600 focus:ring-4"
               required
             />
 
@@ -194,6 +198,7 @@ export default function Contact({ navHoverFlou }) {
               Message
             </label>
             <motion.textarea
+              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
@@ -201,17 +206,17 @@ export default function Contact({ navHoverFlou }) {
               initial={{ scale: 1 }}
               whileTap={{ scale: 1.01 }}
               placeholder="Veuillez entrer votre message"
-              className="p-2 border border-base-500 outline-none h-[20vh] resize-none transition-opacity duration-300 rounded-md  ring-cyan-600 focus:ring-4"
+              className="p-2 border border-base-500 outline-none min-h-[140px] resize-none transition-opacity duration-300 rounded-md ring-cyan-600 focus:ring-4 bg-white text-gray-900"
               required
             />
 
-            <div className="w-full h-[10vh] flex items-end">
+            <div className="w-full flex items-end pt-2">
               <motion.input
                 type="submit"
                 value="Envoyer"
-                className="w-full p-3 text-lg font-bold text-white border border-base-500 rounded-2xl bg-base-900 hover:bg-base-700 hover:border-base-900"
+                className="w-full p-3 text-lg font-bold text-white border border-base-500 rounded-2xl bg-base-900 hover:bg-base-700 hover:border-base-900 cursor-pointer"
                 initial={{ scale: 1 }}
-                whileTap={{ scale: 0.01 }}
+                whileTap={{ scale: 0.98 }}
               />
             </div>
           </form>

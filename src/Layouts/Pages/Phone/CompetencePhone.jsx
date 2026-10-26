@@ -1,51 +1,106 @@
-import { FaReact, FaNodeJs, FaCss3Alt, FaBootstrap, FaPython, FaGithub } from 'react-icons/fa';
-import { TbBrandDjango, TbBrandFramerMotion, TbBrandReactNative, TbBrandVscode } from 'react-icons/tb';
-import { AiFillHtml5 } from 'react-icons/ai';
-import { SiTailwindcss, SiMysql, SiTypescript, SiExpress, SiMongodb, SiPostman } from 'react-icons/si';
-import { BiGitBranch } from 'react-icons/bi';
-import { IoLogoJavascript } from 'react-icons/io5';
-import { FcLinux } from 'react-icons/fc';
+import { FcLinux } from "react-icons/fc";
+import {
+  SiPostman,
+  SiTailwindcss,
+  SiExpress,
+  SiTypescript,
+  SiMysql,
+  SiLaravel,
+  SiPrisma,
+  SiNpm,
+  SiComposer,
+} from "react-icons/si";
+import { TbBrandFramerMotion, TbBrandDjango, TbBrandVscode } from "react-icons/tb";
+import { FaReact, FaCss3Alt, FaBootstrap, FaGithub } from "react-icons/fa";
+import { AiFillHtml5 } from "react-icons/ai";
+import { BiGitBranch } from "react-icons/bi";
+import { IoLogoJavascript } from "react-icons/io5";
 
-// données de compétences
-const competences = [
-    { name: 'HTML', icon: <AiFillHtml5 size={64} className="text-red-500" /> },
-    { name: 'CSS', icon: <FaCss3Alt size={64} className="text-blue-500" /> },
-    { name: 'JavaScript', icon: <IoLogoJavascript size={64} className="text-yellow-400" /> },
-    { name: 'TypeScript', icon: <SiTypescript size={64} className="text-blue-500" /> },
-    { name: 'React JS', icon: <FaReact size={64} className="text-cyan-500" /> },
-    { name: 'Express JS', icon: <SiExpress size={64} className="text-gray-400" /> },
-    { name: 'Node JS', icon: <FaNodeJs size={64} className="text-green-500" /> },
-    { name: 'Django', icon: <TbBrandDjango size={64} className="text-gray-600 dark:text-gray-400" /> },
-    { name: 'Tailwind CSS', icon: <SiTailwindcss size={64} className="text-cyan-400" /> },
-    { name: 'Bootstrap', icon: <FaBootstrap size={64} className="text-purple-500" /> },
-    { name: 'Git', icon: <BiGitBranch size={64} className="text-orange-600" /> },
-    { name: 'GitHub', icon: <FaGithub size={64} className="text-gray-900 dark:text-gray-100" /> },
-    { name: 'MongoDB', icon: <SiMongodb size={64} className="text-lime-500" /> },
-    { name: 'MySQL', icon: <SiMysql size={64} className="text-blue-600" /> },
-    { name: 'React Native', icon: <TbBrandReactNative size={64} className="text-sky-500" /> },
-    { name: 'Python', icon: <FaPython size={64} className="text-yellow-400" /> },
-    { name: 'Postman', icon: <SiPostman size={64} className="text-orange-500" /> },
-    { name: 'VS Code', icon: <TbBrandVscode size={64} className="text-blue-400" /> },
-    { name: 'Framer motion', icon: <TbBrandFramerMotion size={64} className="text-orange-500" /> },
-    { name: 'Linux', icon: <FcLinux size={64} className="text-orange-500" /> },
+const SKILL_GROUPS = [
+  {
+    label: "Front-end",
+    skills: [
+      { name: "HTML5", icon: <AiFillHtml5 />, color: "text-orange-500" },
+      { name: "CSS3", icon: <FaCss3Alt />, color: "text-blue-500" },
+      { name: "JavaScript", icon: <IoLogoJavascript />, color: "text-yellow-400" },
+      { name: "TypeScript", icon: <SiTypescript />, color: "text-blue-500" },
+      { name: "React.js", icon: <FaReact />, color: "text-cyan-400" },
+      { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-cyan-400" },
+      { name: "Bootstrap", icon: <FaBootstrap />, color: "text-purple-500" },
+      { name: "Framer Motion", icon: <TbBrandFramerMotion />, color: "text-pink-500" },
+    ],
+  },
+  {
+    label: "Back-end",
+    skills: [
+      { name: "Laravel", icon: <SiLaravel />, color: "text-red-500" },
+      { name: "Express.js", icon: <SiExpress />, color: "text-white/80" },
+      { name: "Prisma", icon: <SiPrisma />, color: "text-teal-400" },
+      { name: "Django", icon: <TbBrandDjango />, color: "text-emerald-500" },
+      { name: "MySQL", icon: <SiMysql />, color: "text-blue-500" },
+    ],
+  },
+  {
+    label: "Outils",
+    skills: [
+      { name: "Git", icon: <BiGitBranch />, color: "text-orange-600" },
+      { name: "GitHub", icon: <FaGithub />, color: "text-white" },
+      { name: "VS Code", icon: <TbBrandVscode />, color: "text-blue-400" },
+      { name: "Linux", icon: <FcLinux />, color: "" },
+      { name: "npm", icon: <SiNpm />, color: "text-red-500" },
+      { name: "Composer", icon: <SiComposer />, color: "text-orange-300" },
+      { name: "Postman", icon: <SiPostman />, color: "text-orange-500" },
+    ],
+  },
 ];
 
 export default function Competences({ navHoverFlou }) {
-    return (
-        <section id="Competences" className={`w-full min-h-screen pt-16 px-4 pb-32 bg-base-900 transition-all duration-300 ${navHoverFlou ? 'blur-md' : ''}`}>
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-2 gap-x-4 gap-y-6">
-                    {competences.map(comp => (
-                        <div key={comp.name} className="flex flex-col items-center justify-center py-6 px-4 border border-gray-700 rounded-3xl backdrop-blur-sm bg-white/5 shadow-lg transform transition-transform duration-300 hover:scale-[1.05] hover:border-blue-400 hover:shadow-[0_0_20px_0_rgba(96,165,250,0.3)]">
-                            {/* Le conteneur de l'icône permet un meilleur alignement vertical */}
-                            <div className="flex items-center justify-center h-20">
-                                {comp.icon}
-                            </div>
-                            <span className="mt-2 text-base font-semibold text-gray-200 text-center">{comp.name}</span>
-                        </div>
-                    ))}
-                </div>
+  return (
+    <section
+      id="Competences"
+      className={`w-full min-h-screen px-4 py-14 bg-base-900 transition-all duration-300 ${navHoverFlou ? "blur-md" : ""}`}
+    >
+      <div className="max-w-xl mx-auto flex flex-col gap-8">
+        <header>
+          <span className="text-[10px] font-semibold uppercase tracking-[0.35em] text-cyan-400/90">
+            Compétences
+          </span>
+          <h2 className="mt-2 text-2xl font-bold text-white tracking-tight">
+            Stack technique
+          </h2>
+          <p className="mt-2 text-sm text-gray-400 leading-relaxed">
+            Technologies et outils utilisés au quotidien pour concevoir des applications web complètes.
+          </p>
+        </header>
+
+        {SKILL_GROUPS.map((group) => (
+          <div key={group.label}>
+            <div className="flex items-center gap-3 mb-3">
+              <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+                {group.label}
+              </h3>
+              <span className="text-[10px] font-mono text-white/30">
+                {String(group.skills.length).padStart(2, "0")}
+              </span>
+              <div className="flex-1 h-px bg-gray-700/60" />
             </div>
-        </section>
-    );
+
+            <div className="grid grid-cols-2 xs:grid-cols-3 gap-2.5">
+              {group.skills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center py-3 px-2 border border-gray-700/60 rounded-2xl backdrop-blur-sm bg-white/[0.03] transition-all duration-300 active:scale-[0.97]"
+                >
+                  <span className={`text-2xl ${skill.color}`}>{skill.icon}</span>
+                  <span className="mt-2 text-[11px] font-semibold text-gray-300 text-center leading-tight">
+                    {skill.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

@@ -9,14 +9,12 @@ import Swal from 'sweetalert2'
 import React from "react";
 
 export default function Contact() {
-  // État local pour inputs contrôlés
   const [formData, setFormData] = React.useState({
     nom: "",
     email: "",
     message: ""
   });
 
-  // Handler input change
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
@@ -24,7 +22,6 @@ export default function Contact() {
     }));
   };
 
-  // Envoi du formulaire
   const onSubmit = async (event) => {
     event.preventDefault();
 
@@ -50,7 +47,6 @@ export default function Contact() {
           text: "Tu auras une réponse de la part de Kevin sous peu.",
           icon: "success"
         });
-        // Reset formulaire
         setFormData({ nom: "", email: "", message: "" });
       } else {
         throw new Error("Erreur lors de l'envoi.");
@@ -64,79 +60,79 @@ export default function Contact() {
     }
   };
 
+  const contacts = [
+    { icon: <BsTelephone />, value: ": 0389423351", href: null },
+    { icon: <BsWhatsapp />, value: ": 0389423351", href: "https://wa.me/0389423351" },
+    { icon: <FiLinkedin />, value: ": Niavo Kevin", href: "https://www.linkedin.com/in/kevin-niavo-39a541286/" },
+    { icon: <CiFacebook />, value: ": Niavo Kevin", href: "https://web.facebook.com/niavo.kevin" },
+    { icon: <AiOutlineMail />, value: ": niavo.kevin9@gmail.com", href: "mailto:niavo.kevin9@gmail.com" },
+  ];
+
+  const identity = [
+    { icon: <AiOutlineUser />, value: "MAMINIRINA Niavo Kevin" },
+    { icon: <BiCodeAlt />, value: "Développeur fullstack JS Junior" },
+    { icon: <FaMapMarkerAlt />, value: "Itaosy Antananarivo Madagascar" },
+  ];
+
+  const inputClass =
+    "w-full p-2.5 text-sm lg:text-base text-white bg-transparent border border-white/40 outline-none rounded-md focus:ring-2 focus:ring-cyan-600 focus:border-cyan-600 transition-colors duration-200 placeholder:text-white/40";
+
   return (
-    <div
+    <section
       id="Contact"
-      className={`flex items-center justify-center w-full h-full lg:h-screen pb-[60rem] mb- lg:p-0 selection:bg-base-900 bg-base-900 `}
+      className="w-full bg-base-900 py-16 px-3 sm:px-4"
     >
-      <div className="w-full lg:h-[80%] h-screen p-2 mt-20 flex justify-between items-center gap-5 flex-col lg:flex-row">
-        {/* Informations */}
-        <div className="w-full h-screen border border-white lg:h-full bg-base-900 lg:ml-20">
-          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b">
+      <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row gap-5 lg:gap-6">
+        <div className="w-full lg:w-1/2 border border-white/30 bg-base-900 flex flex-col">
+          <div className="shrink-0 p-3 text-lg sm:text-xl lg:text-2xl font-extrabold tracking-wider text-center text-white border-b border-white/30">
             Informations
           </div>
-          <div className="w-full h-screen lg:h-[90.9%] mt-1 flex flex-col lg:flex-row">
-            {/* Côté gauche */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-r border-white lg:h-full">
-              <div className="flex items-center p-3 cursor-not-allowed hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4">
-                <BsTelephone className="absolute mr-3 left-5 lg:static" /> : 0389423351
-              </div>
-              <a
-                href="https://wa.me/0389423351"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
-              >
-                <BsWhatsapp className="absolute mr-3 left-5 lg:static" /> : 0389423351
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kevin-niavo-39a541286/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
-              >
-                <FiLinkedin className="absolute mr-3 left-5 lg:static" /> : Niavo Kevin
-              </a>
-              <a
-                href="https://web.facebook.com/niavo.kevin"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
-              >
-                <CiFacebook className="absolute mr-3 left-5 lg:static" /> : Niavo Kevin
-              </a>
-              <a
-                href="mailto:niavo.kevin9@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center p-3 text-white no-underline cursor-pointer hover:bg-base-700 rounded-xl hover:outline outline-1 outline-base-300 outline-offset-4"
-              >
-                <AiOutlineMail className="absolute mr-3 left-5 lg:static" /> : niavo.kevin9@gmail.com
-              </a>
+
+          <div className="flex flex-col lg:flex-row flex-1">
+            <div className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-2 p-4 text-sm sm:text-base lg:text-lg font-bold text-white lg:border-r border-white/30">
+              {contacts.map((contact, index) => {
+                const inner = (
+                  <>
+                    <span className="shrink-0 text-base lg:text-lg">{contact.icon}</span>
+                    <span className="break-all">{contact.value}</span>
+                  </>
+                );
+                return contact.href ? (
+                  <a
+                    key={index}
+                    href={contact.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full p-3 text-white no-underline hover:bg-base-700 rounded-xl transition-colors duration-200"
+                  >
+                    {inner}
+                  </a>
+                ) : (
+                  <div
+                    key={index}
+                    className="flex items-center justify-center gap-2 w-full p-3 cursor-not-allowed hover:bg-base-700 rounded-xl transition-colors duration-200"
+                  >
+                    {inner}
+                  </div>
+                );
+              })}
             </div>
 
-            {/* Côté droite */}
-            <div className="flex flex-col items-center justify-center w-full h-screen space-y-5 text-xl font-bold text-white border-t border-white lg:h-full lg:border-none">
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                <div className="flex items-center justify-center">
-                  <AiOutlineUser className="absolute mr-3 left-5 lg:static" /> MAMINIRINA Niavo Kevin
-                </div>
-                <div className="flex items-center justify-center">
-                  <BiCodeAlt className="absolute mr-3 left-5 lg:static" /> Développeur fullstack JS Junior
-                </div>
-                <div className="flex items-center justify-center">
-                  <FaMapMarkerAlt className="absolute mr-3 left-5 lg:static" /> Itaosy Antananarivo Madagascar
-                </div>
+            <div className="w-full lg:w-1/2 flex flex-col border-t lg:border-t-0 border-white/30">
+              <div className="flex flex-col items-center justify-center gap-3 p-5 text-sm sm:text-base lg:text-lg font-bold text-white">
+                {identity.map((item, index) => (
+                  <div key={index} className="flex items-center gap-3 text-center">
+                    <span className="shrink-0">{item.icon}</span>
+                    <span>{item.value}</span>
+                  </div>
+                ))}
               </div>
 
-              {/* Map */}
-              <div className="flex flex-col items-center justify-center w-full space-y-5 text-xl font-bold text-white border-white h-1/2">
-                <div className="w-full h-[98%] bg-white border border-white">
+              <div className="px-3 pb-3 mt-auto">
+                <div className="w-full h-48 sm:h-56 border border-white/30 overflow-hidden">
                   <iframe
                     title="Location de Niavo Kevin"
-                    width="100%"
-                    height="100%"
-                    className="object-cover border-2 border-white w-full h-full shadow-[inset_0px_0px_5px_rgba(0,0,0,0.7)]"
+                    className="w-full h-full block"
                     style={{ border: 0 }}
                     loading="lazy"
                     allowFullScreen
@@ -148,75 +144,74 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Formulaire */}
-        <div className="w-full h-screen pb-5 mt-20 border lg:h-full lg:w-1/2 lg:mr-20 lg:mt-0 lg:pb-0">
-          <div className="p-3 text-2xl font-extrabold tracking-wider text-center text-white border-b border-white">
+        <div className="w-full lg:w-1/2 border border-white/30 bg-base-900 flex flex-col">
+          <div className="shrink-0 p-3 text-lg sm:text-xl lg:text-2xl font-extrabold tracking-wider text-center text-white border-b border-white/30">
             Contactez-moi
           </div>
 
-          <form
-            className="w-full h-[90%] mt-1 p-2 flex flex-col space-y-3 justify-center"
-            onSubmit={onSubmit}
-          >
-            <label htmlFor="nom" className="text-lg font-bold text-white">
+          <form className="p-4 sm:p-5 flex flex-col gap-3 flex-1" onSubmit={onSubmit}>
+            <label htmlFor="nom" className="text-base lg:text-lg font-bold text-white">
               Nom
             </label>
             <motion.input
+              id="nom"
               type="text"
               name="nom"
               value={formData.nom}
               onChange={handleChange}
               title="Entrez votre nom"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.01 }}
+              whileTap={{ scale: 0.998 }}
               placeholder="Veuillez entrer votre nom"
-              className="p-2 transition-opacity duration-300 border border-white outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
+              className={inputClass}
               required
             />
 
-            <label htmlFor="email" className="text-lg font-bold text-white">
+            <label htmlFor="email" className="text-base lg:text-lg font-bold text-white">
               Email
             </label>
             <motion.input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               title="Entrez votre Email"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.01 }}
+              whileTap={{ scale: 0.998 }}
               placeholder="Veuillez entrer votre Email"
-              className="p-2 transition-opacity duration-300 border border-white outline-none default:bg-transparent rounded-md  ring-cyan-600 focus:ring-4"
+              className={inputClass}
               required
             />
 
-            <label htmlFor="message" className="text-lg font-bold text-white">
+            <label htmlFor="message" className="text-base lg:text-lg font-bold text-white">
               Message
             </label>
             <motion.textarea
+              id="message"
               name="message"
               value={formData.message}
               onChange={handleChange}
               title="Entrez votre message"
               initial={{ scale: 1 }}
-              whileTap={{ scale: 1.01 }}
+              whileTap={{ scale: 0.998 }}
               placeholder="Veuillez entrer votre message"
-              className="p-2 border border-white outline-none h-[20vh] resize-none transition-opacity duration-300 rounded-md  ring-cyan-600 focus:ring-4"
+              className={`${inputClass} min-h-[140px] resize-none`}
               required
             />
 
-            <div className="w-full h-[10vh] flex items-end">
+            <div className="pt-2 mt-auto">
               <motion.input
                 type="submit"
                 value="Envoyer"
-                className="w-full p-3 text-lg font-bold text-white border border-base-500 rounded-2xl bg-base-900 hover:bg-base-700 hover:border-base-900"
+                className="w-full p-3 text-base lg:text-lg font-bold text-white border border-base-500 rounded-2xl bg-base-900 hover:bg-base-700 hover:border-base-900 cursor-pointer transition-colors duration-200"
                 initial={{ scale: 1 }}
-                whileTap={{ scale: 0.5 }}
+                whileTap={{ scale: 0.98 }}
               />
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

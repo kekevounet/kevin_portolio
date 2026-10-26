@@ -1,68 +1,106 @@
-import React from 'react';
+export default function ProfilLaptop({ navHoverFlou }) {
+  const services = [
+    "Développement Front-end avec React JS",
+    "Création d'APIs RESTful avec Laravel ou Express JS",
+    "Intégration de bases de données (MySQL)",
+  ];
 
-export default function ProfilLaptop({navHoverFlou}) {
   return (
-    <div className={`w-full h-screen flex items-center text-base-100 justify-between flex-col gap-3 p-5 font-sans ${navHoverFlou ? 'blur-md' : '' }`} id="Profil">
-      {/* Section Principale : Nom, Rôle, Mission & Vision */}
-      <div className="w-full h-[60%] flex items-end justify-center">
-        <div className="h-[85%] w-full rounded-3xl bg-gradient-to-br from-cyan-500 to-blue-600 relative flex flex-col justify-end p-8 text-white shadow-lg overflow-hidden">
-          {/* Un cercle décoratif en haut à droite pour le dynamisme */}
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 shadow-md rounded-full transform translate-x-1/4 -translate-y-1/4"></div>
-
-          {/* Contenu principal */}
-          <div className="z-10">
-            <h1 className="text-8xl font-extrabold leading-tight">Niavo Kevin</h1>
-            <p className="text-5xl font-light mt-2">Développeur Full-Stack Junior</p>
-
-            <p className="text-2xl italic mt-4">
-              "Ma mission est de transformer des idées innovantes en applications web performantes et intuitives, en combinant une approche méthodique avec une passion pour les technologies modernes. Je m'engage à créer des expériences numériques qui répondent aux défis d'aujourd'hui et préparent les opportunités de demain."
+    <section
+      id="Profil"
+      className={`w-full min-h-screen lg:min-h-[90vh] text-base-100 duration-500 ${
+        navHoverFlou ? "blur-md" : ""
+      }`}
+    >
+      <div className="max-w-5xl mx-auto w-full px-6 sm:px-8 lg:px-10 py-16 lg:py-20 flex flex-col">
+        {/*  */}
+        <div className="py-10 lg:py-14">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[0.9]">
+            Niavo{" "}
+            <span className="text-cyan-400">
+              Kevin
+            </span>
+          </h1>
+          <div className="mt-6 flex items-center gap-3">
+            <span className="h-px w-8 bg-base-100/30" />
+            <p className="text-xs sm:text-sm font-semibold text-base-100/60 tracking-[0.3em] uppercase">
+              Développeur Full-Stack Junior
             </p>
-
-            <div className="mt-6 border-t border-white border-opacity-30 pt-4">
-              <p className="font-light leading-relaxed">
-                Fort d'une expertise en <span className='font-bold'>React.js pour le front-end</span> et <span className='font-bold'>Express.js pour le back-end</span>, je conçois des solutions complètes et robustes. Mon approche est guidée par les principes du <span className='font-bold'>clean code</span> et une attention particulière au design et à l'expérience utilisateur. J'aime résoudre des problèmes complexes et m'assurer que chaque ligne de code est à la fois fonctionnelle et élégante.
-              </p>
-            </div>
           </div>
         </div>
-      </div>
 
-      {/* Sections du bas : Comment je peux vous aider */}
-      <div className="w-full h-[40%] gap-3 flex justify-between items-center">
-        {/* Section 1 : Création de solutions */}
-        <div className="w-1/2 h-full bg-white text-gray-800 rounded-3xl p-8 shadow-md flex flex-col justify-between overflow-hidden">
+        <div className="border-t border-base-100/10 py-10 lg:py-12">
+          <p className="text-sm sm:text-base lg:text-lg text-base-100/80 font-light leading-[1.75] max-w-3xl">
+            « Ma mission est de transformer des idées innovantes en applications web performantes et intuitives, en combinant une approche méthodique avec une passion pour les technologies modernes. Je m'engage à créer des expériences numériques qui répondent aux défis d'aujourd'hui et préparent les opportunités de demain. »
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 border-t border-base-100/10 py-10 lg:py-12">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-cyan-600">Comment je peux vous aider ?</h2>
-            <p className="text-sm leading-relaxed mb-4">
-              Je construis des <span className="font-bold">applications web robustes et esthétiques</span> du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une <span className="font-bold">architecture solide et un code propre</span>.
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-cyan-400 mb-4">
+              Ce que je propose
+            </h2>
+            <p className="text-sm text-base-100/80 leading-relaxed">
+              Je construis des{" "}
+              <span className="font-semibold text-base-100">
+                applications web robustes et esthétiques
+              </span>{" "}
+              du front-end au back-end. Que ce soit pour un site vitrine élégant, une plateforme e-commerce dynamique ou une application web complexe, je m'assure que votre vision prenne vie avec une{" "}
+              <span className="font-semibold text-base-100">
+                architecture solide et un code propre
+              </span>
+              .
             </p>
-            <ul className="list-disc list-inside text-sm space-y-1 mt-4">
-              <li>Développement Front-end avec React JS</li>
-              <li>Création d'APIs RESTful avec Express JS</li>
-              <li>Intégration de bases de données (MySQL)</li>
+            <ul className="mt-5 flex flex-col gap-2.5 text-sm text-base-100/80">
+              {services.map((service) => (
+                <li key={service} className="flex items-start gap-3">
+                  <span className="mt-[9px] w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 shrink-0" />
+                  <span>{service}</span>
+                </li>
+              ))}
             </ul>
           </div>
-          <div className="text-right text-xs text-gray-500 mt-4">
-            — Votre partenaire numérique à Antananarivo, Madagascar
-          </div>
-        </div>
 
-        {/* Section 2 : Mon approche et ce que je recherche */}
-        <div className="w-1/2 h-full bg-white text-gray-800 rounded-3xl p-8 shadow-md flex flex-col justify-between overflow-hidden">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-blue-600">Mon approche & Ce que je recherche</h2>
-            <p className="text-sm leading-relaxed mb-4">
-              Je crois fermement en un développement agile, axé sur les résultats et la collaboration. Mon objectif est de fournir des solutions optimisées, faciles à maintenir et à faire évoluer.
+            <h2 className="text-[11px] font-semibold uppercase tracking-[0.3em] text-blue-400 mb-4">
+              Mon approche
+            </h2>
+            <p className="text-sm text-base-100/80 leading-relaxed">
+              Fort d'une expertise en{" "}
+              <span className="font-semibold text-base-100">
+                React.js pour le front-end
+              </span>{" "}
+              et{" "}
+              <span className="font-semibold text-base-100">
+                Express.js pour le back-end
+              </span>
+              , je conçois des solutions complètes et robustes. Mon approche est guidée par les principes du{" "}
+              <span className="font-semibold text-base-100">clean code</span> et une attention particulière au design et à l'expérience utilisateur.
             </p>
-            <p className="text-sm leading-relaxed">
+            <p className="mt-4 text-sm text-base-100/80 leading-relaxed">
               Actuellement à la recherche d'opportunités stimulantes pour rejoindre une équipe innovante en tant que développeur junior. Je suis impatient de contribuer à des projets ambitieux et de continuer à développer mes compétences techniques et interpersonnelles.
             </p>
           </div>
-          <div className="text-right text-xs text-gray-500 mt-4">
-            Contact : 038 94 233 51 | niavo.kevin9@gmail.com
+        </div>
+
+        <div className="border-t border-base-100/10 pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-base-100/50">
+          <span className="tracking-wide">Basé à Antananarivo, Madagascar</span>
+          <div className="flex items-center gap-6">
+            <a
+              href="tel:0389423351"
+              className="hover:text-cyan-400 transition-colors duration-200"
+            >
+              038 94 233 51
+            </a>
+            <a
+              href="mailto:niavo.kevin9@gmail.com"
+              className="hover:text-cyan-400 transition-colors duration-200"
+            >
+              niavo.kevin9@gmail.com
+            </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
