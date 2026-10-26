@@ -58,7 +58,7 @@ export default function Competences({ navHoverFlou }) {
   return (
     <section
       id="Competences"
-      className={`w-full min-h-screen px-4 py-14 bg-base-900 transition-all duration-300 ${navHoverFlou ? "blur-md" : ""}`}
+      className={`w-full min-h-screen px-4 py-10 bg-base-900 transition-all duration-300 pb-32 ${navHoverFlou ? "blur-md" : ""}`}
     >
       <div className="max-w-xl mx-auto flex flex-col gap-8">
         <header>

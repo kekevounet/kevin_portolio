@@ -80,7 +80,7 @@ export default function Contact() {
   return (
     <section
       id="Contact"
-      className="w-full bg-base-900 py-16 px-3 sm:px-4"
+      className="w-full bg-base-900 py-16 px-3 pb-32 sm:px-4"
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row gap-5 lg:gap-6">
         <div className="w-full lg:w-1/2 border border-white/30 bg-base-900 flex flex-col">

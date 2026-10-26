@@ -72,7 +72,7 @@ export default function ProfilLaptop({ navHoverFlou }) {
               </span>{" "}
               et{" "}
               <span className="font-semibold text-base-100">
-                Express.js pour le back-end
+                Laravel ou Express.js pour le back-end
               </span>
               , je conçois des solutions complètes et robustes. Mon approche est guidée par les principes du{" "}
               <span className="font-semibold text-base-100">clean code</span> et une attention particulière au design et à l'expérience utilisateur.

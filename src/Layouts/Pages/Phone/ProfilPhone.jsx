@@ -1,7 +1,7 @@
 export default function ProfilMobile() {
   const services = [
     "Développement Front-end avec React JS",
-    "Création d'APIs RESTful avec Express JS",
+    "Création d'APIs RESTful avec Laravel ou Express JS",
     "Intégration de bases de données (MongoDB, MySQL)",
   ];
 
